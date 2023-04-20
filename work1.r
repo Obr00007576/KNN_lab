@@ -23,7 +23,7 @@ for(n in train_sizes)
 }
 
 plot(train_sizes*nrow(TicTacToe), sapply(error_list, unlist), type = "b", xlab = "Sample size", ylab = "Test error")
-title("Vehicle")
+title("Tic_tac_toe")
 
 data(spam)
 
