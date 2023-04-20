@@ -26,3 +26,16 @@ With RI = 1.516, Na = 11.7, Mg = 1.01, Al = 1.19, Si = 72.59, K = 0.43, Ca = 11.
 Predicted type: 4
 ```
 It is most likely to be the glass for non-melt treated window.
+
+## Work3
+The trained knn model with best k = 8
+
+```
+Error rate: 0.08
+```
+The image of classification of the test dataset by the knn model:
+
+![avatar](svmdata.png)
+
+## Work4
+The predicted results from the testsets are stored in the Titanic_prediction_from_test.csv.
