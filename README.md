@@ -19,7 +19,7 @@ The best kernel for the dataset is triweight.
 
 ![avatar](Glass_del_colmn1.png)
 
-If we delete the 7-th colmn - value of Ca content, the error rate will raise the most. So it means that Ca content has the greatest influence on the knn model for the set. Relatively, the content of Al and Ri does not have influence on the knn model.
+If we delete the 7-th colmn - value of Ca content, the error rate will raise the most. So it means that Ca content has the greatest influence on the knn model for the set. Relatively, the content of Al and Rl does not have influence on the knn model.
 
 With RI = 1.516, Na = 11.7, Mg = 1.01, Al = 1.19, Si = 72.59, K = 0.43, Ca = 11.44, Ba = 0.02, Fe = 0.1 we can get the output:
 ```
