@@ -17,7 +17,7 @@ We can see that with increment of k, error rate increases.
 
 The best kernel for the dataset is triweight.
 
-![avatar](Glass_del_colmn.png)
+![avatar](Glass_del_colmn1.png)
 
 If we delete the 7-th colmn - value of Ca content, the error rate will raise the most. So it means that Ca content has the greatest influence on the knn model for the set. Relatively, the content of Al and Ri does not have influence on the knn model.
 
