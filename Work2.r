@@ -33,15 +33,18 @@ for(n in kern)
 }
 barplot(unlist(error_list), names.arg = kern, xlab = "Kernel Type", ylab = "Error rate", main = "KNN Kernel Comparison")
 
+model <- as.data.frame(knn(train_data[, -c(10)], test_data[, -c(10)], train_data[, 10], k = 7))
+standard_error <- sum(model[, c(1)] != test_data[, c(10)]) / nrow(test_data)
+
 deleted_col <- seq(1, 9, 1)
 error_list <- list()
 for(i in deleted_col)
 {
     model <- as.data.frame(knn(train_data[, -c(10, i)], test_data[, -c(10, i)], train_data[, 10], k = 7))
     error_rate <- sum(model[, c(1)] != test_data[, c(10)]) / nrow(test_data)
-    error_list[[as.character(i)]] <- error_rate
+    error_list[[as.character(i)]] <- abs(error_rate - standard_error)
 }
-barplot(unlist(error_list), names.arg = deleted_col, xlab = "Deleted column", ylab = "Error rate", main = "KNN Kernel Comparison")
+barplot(unlist(error_list), names.arg = deleted_col, xlab = "Deleted column", ylab = "Error rate - Standard error rate", main = "KNN Kernel Comparison")
 
 model <- train.kknn(Type ~ ., data = train_data, kmax = 20, kernel = "triweight")
 my_data = df <- data.frame(RI = 1.516, Na = 11.7, Mg = 1.01, Al = 1.19, Si = 72.59, K = 0.43, Ca = 11.44, Ba = 0.02, Fe = 0.1)
